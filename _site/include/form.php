@@ -27,8 +27,8 @@ require 'phpmailer/src/SMTP.php';
 $toemails = array();
 
 $toemails[] = array(
-	'email' => 'your-email@website.com', // Your Email Address
-	'name' => 'Your Name' // Your Name
+	'email' => 'nathan@tryforumly.com', // Your Email Address
+	'name' => 'Nate Levine' // Your Name
 );
 
 
@@ -37,8 +37,8 @@ $toemails[] = array(
 ---------------------------------------------------*/
 
 $fromemail = array(
-	'email' => 'no-reply@website.com', // Company's Email Address (preferably currently used Domain Name)
-	'name' => 'Company Name' // Company Name
+	'email' => 'no-reply@tryforumly.com', // Company's Email Address (preferably currently used Domain Name)
+	'name' => 'Forumly' // Company Name
 );
 
 
@@ -61,8 +61,15 @@ $hcaptcha_secret = ''; // Your hCaptcha Secret
 /*-------------------------------------------------
 	PHPMailer Initialization
 ---------------------------------------------------*/
-
-$mail = new PHPMailer();
+$mail = new PHPMailer(true);
+
+$mail->isSMTP();
+$mail->Host = 'smtp.example.com'; // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;
+$mail->Username = 'nathan@getfishbit.com'; // SMTP username
+$mail->Password = 'fcxk zoxo eeph gueo'; // SMTP password
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Enable TLS encryption, `PHPMailer::ENCRYPTION_SMTPS` also accepted
+$mail->Port = 587; // TCP port to connect toail = new PHPMailer();
 
 /* Add your SMTP Codes after this Line */
 
