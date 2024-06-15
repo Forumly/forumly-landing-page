@@ -65,6 +65,7 @@ $(function() {
      }).done(function(response) {
          $('.form-result').html('<div class="alert alert-success">Thank you! Your message has been sent.</div>');
          form.find('input, textarea').val('');
+				 alert('Thank you for contacting us, we will be in touch shortly.');
      }).fail(function(data) {
          if (data.responseText !== '') {
              $('.form-result').html('<div class="alert alert-danger">' + data.responseText + '</div>');
